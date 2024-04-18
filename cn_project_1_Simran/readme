@@ -1,0 +1,15 @@
+Compilation of server and client files:
+gcc server.c -o server.out
+gcc client.c -o client.out
+Running server and client files. There are two modes in which we can run:
+
+Mode_error = 0  for client means that client is working fine and will send correct packets
+Mode_error = 1 for client means that client will send first packet correct and rest 4 will send wrong packets
+./client.out localhost 9999 0
+./client.out localhost 9999 1
+
+Mode_error = 0  for server means that server will be working fine and will send response if packet is received.
+Mode_error = 1 for server will not send acknoledgment this is to validate timeout and retransmission
+
+./server.out 9999 0
+./server.out 9999 1

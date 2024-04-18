@@ -1,0 +1,14 @@
+Compilation of server and client files:
+gcc server.c -o server.out
+gcc client.c -o client.out 
+
+Running server and client files. 
+
+./client.out localhost 9999
+
+Mode_error = 0  for server means that server will be working fine and will send response if packet is received.
+Mode_error =1 for server will not send acknoledgment this is to validate timeout and retransmission
+
+./server.out 9999 0
+./server.out 9999 1
+
